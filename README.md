@@ -10,6 +10,7 @@ Lattice helps active retail and prosumer investors research tokenized U.S. equit
 
 - Live demo: https://6mh9u44e.mule.page/
 - Final subtitled walkthrough: `Lattice_Demo_Final_Subtitled.mp4.`
+- https://youtu.be/zO7TUm4WndM
 - Use the **Guided demo** button for the required question-to-action research flow.
 
 All prices, instruments, portfolio values, AI responses, and orders in the public static demo are simulated.
@@ -43,29 +44,22 @@ Browser UI → /api/orbit → Bitget Qwen Responses API
 
 The Node server keeps the Qwen credential off the client. If no credential is configured, Orbit clearly falls back to deterministic demo mode.
 
-## Run locally
+## Access the demo
 
-Requirements: Node.js 20 or newer. No npm dependencies are required.
+Open the live demo: https://6mh9u44e.mule.page/
 
-1. Copy `.env.example` values into your deployment environment.
-2. Set `BITGET_QWEN_API_KEY` to the key issued through the official hackathon process.
-3. Run `npm start`.
-4. Open the application on the configured port.
+Use the Guided Demo button to follow the research workflow.
 
-The handbook specifies:
+Important: The public demo uses simulated data and responses. It does not execute real trades.
 
-- Base URL: `https://hackathon.bitgetops.com/v1`
-- Recommended model: `qwen3.8-max`
-- Credential variable: `BITGET_QWEN_API_KEY`
-
-Never commit a real credential. `.env` is intentionally excluded from source control.
+This repository contains the available project files, validation materials, and demo recordings. The complete server-side application is not included.
 
 ## Validation
 
 The repository includes:
 
-- `VALIDATION_PLAN.md.` — task protocol and success criteria
-- `results-template.csv.` — blank participant-level results sheet
+- `VALIDATION_PLAN.md` — task protocol and success criteria
+- `results-template.csv` — blank participant-level results sheet
 
 No external-user, trading-return, volume, or AUM result is claimed yet. Record results only after real sessions and label every metric observed, estimated, or targeted.
 
