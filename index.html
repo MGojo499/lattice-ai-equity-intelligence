@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lattice — an explainable AI workspace for tokenized U.S. equities.">
+  <title>Lattice — AI Equity Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div id="app">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Lattice home">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span>LATTICE<small>AI EQUITY OS</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="command"><span class="nav-icon">⌁</span>Command center</button>
+        <button class="nav-item" data-view="research"><span class="nav-icon">⌕</span>Research desk</button>
+        <button class="nav-item" data-view="thesis"><span class="nav-icon">◇</span>Thesis court <b>3</b></button>
+        <button class="nav-item" data-view="composer"><span class="nav-icon">◫</span>Basket composer</button>
+        <button class="nav-item" data-view="receipts"><span class="nav-icon">≡</span>Signal receipts</button>
+      </nav>
+      <div class="side-label">WATCHLIST</div>
+      <div class="watchlist">
+        <button data-ticker="NVDAx" class="watch active"><span><i class="dot live"></i>NVDAx</span><strong>+2.48%</strong></button>
+        <button data-ticker="AMZNx" class="watch"><span><i class="dot"></i>AMZNx</span><strong>+0.91%</strong></button>
+        <button data-ticker="METAx" class="watch"><span><i class="dot"></i>METAx</span><strong class="down">−0.36%</strong></button>
+        <button data-ticker="TSLAx" class="watch"><span><i class="dot"></i>TSLAx</span><strong>+1.17%</strong></button>
+      </div>
+      <div class="side-bottom">
+        <div class="network"><i></i><span><b>Arbitrum One</b><small>Network healthy · 0.02 gwei</small></span></div>
+        <button class="profile"><span>AK</span><span><b>Alex Kim</b><small>Builder account</small></span><i>•••</i></button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div class="market-state"><span class="pulse"></span><b>US MARKET OPEN</b><span>Closes in 04:18:32</span></div>
+        <div class="top-actions">
+          <button class="search-trigger" id="searchBtn"><span>⌕</span> Search equities, filings, signals <kbd>⌘ K</kbd></button>
+          <button class="icon-btn" aria-label="Notifications">◌<i></i></button>
+          <button class="tour-btn" id="tourBtn">▶ Guided demo</button>
+          <button class="connect-btn" id="connectBtn"><span></span>Connect wallet</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="intro reveal">
+          <div>
+            <span class="eyebrow">SATURDAY · 19 SEP 2026</span>
+            <h1>Good morning, Alex.<br><em>See the whole position.</em></h1>
+          </div>
+          <div class="intro-meta">
+            <span>PORTFOLIO PULSE</span>
+            <b class="score-ring">74<small>/100</small></b>
+            <p>Balanced, with concentration risk in semiconductors.</p>
+          </div>
+        </section>
+
+        <section class="market-strip reveal delay-1" aria-label="Market overview">
+          <div><span>S&amp;P 500</span><b>5,632.14</b><em>+0.74%</em></div>
+          <div><span>NASDAQ 100</span><b>19,573.22</b><em>+1.06%</em></div>
+          <div><span>VIX</span><b>14.82</b><em class="negative">−3.27%</em></div>
+          <div><span>10Y YIELD</span><b>4.21%</b><em class="negative">−2 bps</em></div>
+          <div class="ticker-tape"><span>LIVE CONTEXT</span><p>FOMC speakers at 14:00 UTC · Options expiry today · AI complex leading</p></div>
+        </section>
+
+        <section class="dashboard-grid reveal delay-2">
+          <article class="card focus-card">
+            <div class="card-head">
+              <div>
+                <span class="label">FOCUS ASSET</span>
+                <div class="asset-title"><div class="asset-logo">N</div><div><h2 id="assetTicker">NVDAx</h2><p>Tokenized NVIDIA · 1:1 reference</p></div></div>
+              </div>
+              <button class="more-btn">•••</button>
+            </div>
+            <div class="quote-row">
+              <h3 id="assetPrice">$176.24</h3>
+              <span class="quote-up" id="assetMove">+$4.26 · 2.48%</span>
+              <span class="asof">AS OF 14:42:16 UTC</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="chart-axis"><span>180</span><span>175</span><span>170</span><span>165</span></div>
+              <svg class="price-chart" viewBox="0 0 760 210" preserveAspectRatio="none" aria-label="NVDAx intraday price chart">
+                <defs>
+                  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e8b63" stop-opacity=".22"/><stop offset="1" stop-color="#0e8b63" stop-opacity="0"/></linearGradient>
+                </defs>
+                <g class="grid-lines"><line x1="0" y1="30" x2="760" y2="30"/><line x1="0" y1="85" x2="760" y2="85"/><line x1="0" y1="140" x2="760" y2="140"/><line x1="0" y1="195" x2="760" y2="195"/></g>
+                <path class="area" d="M0 174 C32 167 50 180 80 158 S128 141 156 150 S207 137 231 141 S278 119 306 126 S355 98 386 111 S425 116 453 91 S500 105 525 81 S566 72 592 81 S637 61 661 68 S708 34 760 43 L760 210 L0 210Z"/>
+                <path class="line" pathLength="1" d="M0 174 C32 167 50 180 80 158 S128 141 156 150 S207 137 231 141 S278 119 306 126 S355 98 386 111 S425 116 453 91 S500 105 525 81 S566 72 592 81 S637 61 661 68 S708 34 760 43"/>
+                <circle cx="760" cy="43" r="5"/>
+              </svg>
+              <div class="chart-times"><span>09:30</span><span>11:00</span><span>12:30</span><span>14:00</span><span>NOW</span></div>
+            </div>
+            <div class="metric-row">
+              <div><span>AI FAIR VALUE</span><b>$184.00</b><small>+4.40% upside</small></div>
+              <div><span>SENTIMENT</span><b>78 / 100</b><small class="good">Constructive</small></div>
+              <div><span>24H VOLUME</span><b>$8.42M</b><small>On-chain</small></div>
+              <div><span>TRACKING GAP</span><b>0.08%</b><small class="good">Within range</small></div>
+            </div>
+          </article>
+
+          <article class="card ai-brief">
+            <div class="card-head compact"><div><span class="label">LATTICE INTELLIGENCE</span><h2>What changed</h2></div><span class="fresh-tag">FRESH · 2M</span></div>
+            <div class="signal hero-signal">
+              <span class="signal-score">+8.4</span>
+              <div><strong>Inference demand is re-accelerating.</strong><p>Three independent signals turned positive since yesterday’s close.</p></div>
+            </div>
+            <ol class="evidence-list">
+              <li><span>01</span><div><b>Cloud capex revisions</b><p>Hyperscaler estimates rose 3.2% on weighted basis.</p></div><button class="receipt" data-receipt="filing">Receipt ↗</button></li>
+              <li><span>02</span><div><b>Supply-chain velocity</b><p>Advanced packaging lead times tightened by 6 days.</p></div><button class="receipt" data-receipt="supply">Receipt ↗</button></li>
+              <li><span>03</span><div><b>Options positioning</b><p>Call skew is elevated, but not at crowding threshold.</p></div><button class="receipt" data-receipt="options">Receipt ↗</button></li>
+            </ol>
+            <button class="brief-action" id="thesisBtn">Open thesis court <span>→</span></button>
+          </article>
+
+          <article class="card scenario-card">
+            <div class="card-head compact"><div><span class="label">SCENARIO LAB</span><h2>Stress the narrative</h2></div><span class="lab-icon">⌁</span></div>
+            <p class="subcopy">Move one assumption. Lattice traces the portfolio impact and explains why.</p>
+            <div class="scenario-control">
+              <div><label for="capexRange">Hyperscaler capex growth</label><output id="capexValue">+18%</output></div>
+              <input id="capexRange" type="range" min="-10" max="30" value="18">
+              <div class="range-labels"><span>−10%</span><span>BASE +18%</span><span>+30%</span></div>
+            </div>
+            <div class="impact-block">
+              <span>ESTIMATED BASKET IMPACT</span>
+              <div><b id="impactValue">+$1,284</b><em id="impactPct">+3.21%</em></div>
+              <p id="impactCopy">NVDAx contributes 71% of projected upside; concentration remains the binding risk.</p>
+            </div>
+            <div class="mini-bars"><div><span>NVDAx</span><i style="--w:82%"></i><b>+5.8%</b></div><div><span>AMZNx</span><i style="--w:44%"></i><b>+1.9%</b></div><div><span>METAx</span><i style="--w:36%"></i><b>+1.4%</b></div></div>
+          </article>
+
+          <article class="card court-card">
+            <div class="card-head compact"><div><span class="label">THESIS COURT</span><h2>Two agents. One verdict.</h2></div><span class="case-id">CASE #0842</span></div>
+            <div class="debate">
+              <div class="debater bull"><span>BULL AGENT</span><b>Margin expansion is under-modeled.</b><p>Software mix and platform monetization could outpace consensus.</p><em>Confidence 76%</em></div>
+              <div class="versus">VS</div>
+              <div class="debater bear"><span>BEAR AGENT</span><b>Expectations leave no room for air.</b><p>Valuation prices near-perfect execution through the next cycle.</p><em>Confidence 68%</em></div>
+            </div>
+            <div class="verdict"><span>JUDGE</span><p><b>Constructive, size-aware.</b> Add only below 32% portfolio weight and require a −12% invalidation rule.</p><button class="ask-orbit">Ask Orbit</button></div>
+          </article>
+
+          <article class="card basket-card">
+            <div class="card-head compact"><div><span class="label">TOKENIZED BASKET</span><h2>AI Infrastructure / 04</h2></div><button class="edit-basket">Edit weights</button></div>
+            <div class="donut-row">
+              <div class="donut"><div><b>$40,000</b><span>SIMULATED</span></div></div>
+              <div class="allocation-list">
+                <div><i class="c1"></i><span>NVDAx</span><b>35%</b></div>
+                <div><i class="c2"></i><span>AMZNx</span><b>25%</b></div>
+                <div><i class="c3"></i><span>METAx</span><b>20%</b></div>
+                <div><i class="c4"></i><span>USDC</span><b>20%</b></div>
+              </div>
+            </div>
+            <div class="basket-footer"><div><span>RISK</span><b>Moderate</b></div><div><span>24H</span><b class="good">+1.42%</b></div><div><span>EST. FEE</span><b>$0.14</b></div><button id="simulateBtn">Simulate mint →</button></div>
+          </article>
+        </section>
+
+        <section class="skill-deck reveal delay-2">
+          <div class="skill-head">
+            <div><span class="label">AI SKILL DECK · 06 MODULES</span><h2>One question. A full research system.</h2></div>
+            <div class="skill-health"><i></i><span><b>6 skills ready</b><small>Demo orchestration layer</small></span></div>
+          </div>
+          <div class="skill-layout">
+            <div class="skill-nav" role="tablist" aria-label="AI research skills">
+              <button class="active" data-skill="earnings"><span>01</span><div><b>Earnings Decoder</b><small>Expectation gaps</small></div><em>↗</em></button>
+              <button data-skill="verify"><span>02</span><div><b>Source Verifier</b><small>Claim provenance</small></div><em>↗</em></button>
+              <button data-skill="ripple"><span>03</span><div><b>Ripple Map</b><small>Cross-asset impact</small></div><em>↗</em></button>
+              <button data-skill="sentinel"><span>04</span><div><b>Risk Sentinel</b><small>Guardrail monitoring</small></div><em>↗</em></button>
+              <button data-skill="memory"><span>05</span><div><b>Thesis Memory</b><small>Decision patterns</small></div><em>↗</em></button>
+              <button data-skill="afterhours"><span>06</span><div><b>After-hours Radar</b><small>24/7 event pricing</small></div><em>↗</em></button>
+            </div>
+            <article class="skill-stage" id="skillStage">
+              <div class="skill-stage-top"><span id="skillEyebrow">EARNINGS DECODER · NVDAx</span><span class="demo-pill">SIMULATED</span></div>
+              <h3 id="skillTitle">Consensus says beat. Lattice asks: by how much?</h3>
+              <p id="skillDescription">Extracts guidance, management tone, and expectation gaps—then separates what changed from what the market already priced.</p>
+              <div class="skill-finding" id="skillFinding"><span>PRIMARY FINDING</span><b>Revenue expectations rose faster than margin expectations.</b><p>The setup is positive, but a beat below 4.8% may not clear the implied hurdle.</p></div>
+              <div class="skill-metrics" id="skillMetrics"><div><span>DOCUMENTS</span><b>12</b></div><div><span>CLAIMS CHECKED</span><b>38</b></div><div><span>CONFIDENCE</span><b>82%</b></div></div>
+              <div class="skill-actions"><button id="runSkill">Run skill <span>→</span></button><button id="sendOrbit">Send to Orbit</button><small id="skillStatus">Ready · sample data loaded</small></div>
+            </article>
+          </div>
+        </section>
+
+        <footer class="disclaimer"><p>Lattice is a hackathon prototype. Prices, tokenized instruments, analysis, and orders shown are simulated for demonstration only—not investment advice.</p><span>BITGET AI BASE CAMP · S2</span></footer>
+        </section>
+      </div>
+    </main>
+    <aside class="orbit-dock" id="orbitDock">
+      <button class="orbit-tab" id="orbitToggle" aria-expanded="false"><span class="orbit-glyph"><i></i></span><b>ORBIT</b><small>YOUR MARKET FRIEND</small><em>1</em></button>
+      <div class="orbit-panel">
+        <div class="orbit-head"><div><span class="orbit-glyph"><i></i></span><div><b>Orbit</b><small>Personal market friend · Online</small></div></div><button id="orbitClose">×</button></div>
+        <div class="orbit-context"><span>I’M WATCHING</span><p>NVDAx concentration · Capex sensitivity · Your “quality over hype” rule</p></div>
+        <div class="chat" id="chat">
+          <div class="chat-time">TODAY · 14:43</div>
+          <div class="message orbit-message"><b>ORBIT</b><p>Your NVDAx thesis strengthened, but your position is already 3% above the guardrail you set last week.</p></div>
+          <div class="nudge"><span>FRIENDLY PUSHBACK</span><p>If the thesis is right but sizing is wrong, it is still a bad trade.</p><button class="orbit-chip">Show safer sizing</button></div>
+          <div class="message user-message"><p>What would change your mind?</p></div>
+          <div class="message orbit-message"><b>ORBIT</b><p>A 2-quarter slowdown in cloud capex or gross margin below 72% would break the current thesis. I can track both.</p></div>
+        </div>
+        <div class="quick-prompts"><button>Challenge my thesis</button><button>Explain the risk</button></div>
+        <form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Ask Orbit about this position…" autocomplete="off"><button aria-label="Send message">↑</button></form>
+        <div class="orbit-foot"><span>Memory on</span><span>Grounded in 18 receipts</span></div>
+      </div>
+    </aside>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose">×</button>
+      <span class="label">SIMULATION PREVIEW</span><h2 id="modalTitle">Mint AI Infrastructure / 04</h2>
+      <p>This demo models a $40,000 tokenized basket on Arbitrum. No order or blockchain transaction will be submitted.</p>
+      <div class="order-lines"><div><span>Reference value</span><b>$40,000.00</b></div><div><span>Estimated network fee</span><b>$0.14</b></div><div><span>Tracking tolerance</span><b>0.15%</b></div><div><span>Risk guardrail</span><b>Active</b></div></div>
+      <button class="confirm-sim" id="confirmSim">Run simulation</button>
+    </div>
+  </div>
+  <div class="modal tour-modal" id="tourModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="tour-card" role="dialog" aria-modal="true" aria-labelledby="tourTitle">
+      <button class="modal-close" id="tourClose">×</button>
+      <div class="tour-sidebar">
+        <span class="label">RESEARCH WALKTHROUGH</span>
+        <h2 id="tourTitle">From question to position.</h2>
+        <div class="tour-steps">
+          <button class="active" data-step="0"><i>01</i>Question</button>
+          <button data-step="1"><i>02</i>Evidence</button>
+          <button data-step="2"><i>03</i>Debate</button>
+          <button data-step="3"><i>04</i>Stress test</button>
+          <button data-step="4"><i>05</i>Action</button>
+        </div>
+      </div>
+      <div class="tour-stage">
+        <span class="tour-kicker" id="tourKicker">STEP 01 · INVESTOR QUESTION</span>
+        <h3 id="tourHeading">Should I add NVDAx before the next earnings cycle?</h3>
+        <p id="tourBody">Lattice converts a natural-language question into a structured research plan using your portfolio, risk rules, and current market context.</p>
+        <div class="tour-proof" id="tourProof"><span>INPUT CONTEXT</span><b>$40K portfolio · 35% NVDAx · Moderate risk · 2–10 trades/month</b></div>
+        <div class="tour-footer"><span id="tourCounter">01 / 05</span><button id="tourNext">Next: inspect evidence →</button></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
