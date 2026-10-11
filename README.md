@@ -9,7 +9,7 @@ Lattice helps active retail and prosumer investors research tokenized U.S. equit
 ## Demo
 
 - Live demo: https://6mh9u44e.mule.page/
-- Final subtitled walkthrough: `docs/Lattice_Demo_Final_Subtitled.mp4`
+- Final subtitled walkthrough: `Lattice_Demo_Final_Subtitled.mp4.`
 - Use the **Guided demo** button for the required question-to-action research flow.
 
 All prices, instruments, portfolio values, AI responses, and orders in the public static demo are simulated.
@@ -64,8 +64,8 @@ Never commit a real credential. `.env` is intentionally excluded from source con
 
 The repository includes:
 
-- `validation/VALIDATION_PLAN.md` — task protocol and success criteria
-- `validation/results-template.csv` — blank participant-level results sheet
+- `VALIDATION_PLAN.md.` — task protocol and success criteria
+- `results-template.csv.` — blank participant-level results sheet
 
 No external-user, trading-return, volume, or AUM result is claimed yet. Record results only after real sessions and label every metric observed, estimated, or targeted.
 
